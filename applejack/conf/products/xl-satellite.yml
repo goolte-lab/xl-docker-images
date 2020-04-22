@@ -29,4 +29,4 @@ context:
     - "${APP_HOME}/workdir"
   environment:
     - key: INBOUND_ADDRESS
-      value: ""
+      value: "\"\""
