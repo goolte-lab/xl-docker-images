@@ -7,10 +7,10 @@ RUN apk add --no-cache gawk unzip curl
 ENV USER_UID=10001 APP_ROOT=/opt/xebialabs
 ENV APP_HOME=${APP_ROOT}/xl-satellite-server
 
-COPY resources/xl-satellite-server-9.6.0.zip /tmp
+COPY resources/xl-satellite-server-9.6.zip /tmp
 RUN mkdir -p ${APP_ROOT} && \
-    unzip /tmp/xl-satellite-server-9.6.0.zip -d ${APP_ROOT} && \
-    mv ${APP_ROOT}/xl-satellite-server-9.6.0 ${APP_HOME}
+    unzip /tmp/xl-satellite-server-9.6.zip -d ${APP_ROOT} && \
+    mv ${APP_ROOT}/xl-satellite-server-9.6 ${APP_HOME}
 
 # Add bin/run-in-container.sh
 COPY resources/run-in-container.sh ${APP_HOME}/bin/
@@ -48,7 +48,7 @@ MAINTAINER XebiaLabs Development <docker@xebialabs.com>
 LABEL name="xebialabs/xl-satellite" \
       maintainer="docker@xebialabs.com" \
       vendor="XebiaLabs" \
-      version="9.6.0" \
+      version="9.6" \
       release="1" \
       summary="XL Satellite" \
       description="Enterprise-scale Application Release Automation for any environment" \
